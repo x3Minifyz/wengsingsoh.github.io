@@ -188,16 +188,12 @@
 
   toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' }));
 
-  /* ---------- Experience accordion ---------- */
-  jobs.forEach((job) => {
-    const btn = $('.job__toggle', job);
-    const label = $('.job__toggle-label', job);
-    btn.addEventListener('click', () => {
-      const open = !job.classList.contains('is-open');
-      job.classList.toggle('is-open', open);
-      btn.setAttribute('aria-expanded', String(open));
-      label.textContent = open ? 'Hide details' : 'Show details';
-      setTimeout(onScroll, 600); // re-measure timeline after the expand animation
+  /* ---------- "How I work" flip cards ---------- */
+  $$('.flip').forEach((card) => {
+    card.addEventListener('click', () => {
+      const on = !card.classList.contains('is-flipped');
+      card.classList.toggle('is-flipped', on);
+      card.setAttribute('aria-pressed', String(on));
     });
   });
 
@@ -378,44 +374,6 @@
     document.body.classList.remove('modal-open');
     lastTrigger?.focus({ preventScroll: true });
   });
-
-  /* ---------- Expertise segmented control ---------- */
-  const seg = $('.segmented');
-  const pill = $('.segmented__pill', seg);
-  const tabs = $$('[role="tab"]', seg);
-  const panels = $$('.tab-panel');
-  panels.forEach((p) => $$('.chip', p).forEach((c, i) => c.style.setProperty('--i', i)));
-
-  const movePill = (tab) => {
-    pill.style.width = `${tab.offsetWidth}px`;
-    pill.style.transform = `translateX(${tab.offsetLeft}px)`;
-  };
-  const activateTab = (tab, { focus = false, scroll = false } = {}) => {
-    tabs.forEach((t) => {
-      const on = t === tab;
-      t.setAttribute('aria-selected', String(on));
-      t.tabIndex = on ? 0 : -1;
-    });
-    panels.forEach((p) => p.classList.toggle('is-active', p.id === tab.getAttribute('aria-controls')));
-    movePill(tab);
-    if (focus) tab.focus();
-    if (scroll) {
-      seg.scrollTo({ left: tab.offsetLeft - (seg.clientWidth - tab.offsetWidth) / 2, behavior: prefersReduced ? 'auto' : 'smooth' });
-    }
-  };
-  tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => activateTab(tab, { scroll: true }));
-    tab.addEventListener('keydown', (e) => {
-      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-      e.preventDefault();
-      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
-      activateTab(next, { focus: true, scroll: true });
-    });
-  });
-  const resetPill = () => movePill(tabs.find((t) => t.getAttribute('aria-selected') === 'true') || tabs[0]);
-  resetPill();
-  window.addEventListener('resize', resetPill);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(resetPill);
 
   /* ---------- Qualification cards: spotlight + 3D tilt (desktop only) ---------- */
   if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !prefersReduced) {

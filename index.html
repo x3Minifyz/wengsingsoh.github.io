@@ -47,9 +47,9 @@
 
       <nav class="nav__links" aria-label="Primary">
         <a href="#profile">Profile</a>
-        <a href="#experience">Experience</a>
+        <a href="#approach">Approach</a>
+        <a href="#experience">Journey</a>
         <a href="#projects">Projects</a>
-        <a href="#expertise">Expertise</a>
         <a href="#articles">Articles</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -70,9 +70,9 @@
   <!-- Mobile full-screen menu -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#profile" style="--i:0">Profile</a>
-    <a href="#experience" style="--i:1">Experience</a>
-    <a href="#projects" style="--i:2">Projects</a>
-    <a href="#expertise" style="--i:3">Expertise</a>
+    <a href="#approach" style="--i:1">Approach</a>
+    <a href="#experience" style="--i:2">Journey</a>
+    <a href="#projects" style="--i:3">Projects</a>
     <a href="#articles" style="--i:4">Articles</a>
     <a href="#contact" style="--i:5">Contact</a>
     <a href="#articles" style="--i:6" data-resume-view target="_blank" rel="noopener">Resume ↗</a>
@@ -121,7 +121,7 @@
           with Big Four and regional corporate finance experience.
         </p>
         <div class="hero__cta fade-up" style="--d:.7s">
-          <a class="btn btn--primary" href="#experience">View experience</a>
+          <a class="btn btn--primary" href="#profile">About me</a>
           <a class="btn btn--ghost" data-resume-download href="#articles">
             <svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>Download resume
           </a>
@@ -181,7 +181,7 @@
       </div>
     </section>
 
-    <!-- ============ 02 PROFILE ============ -->
+    <!-- ============ 02 PROFILE + HOW I CAN HELP ============ -->
     <section class="section section--profile" id="profile">
       <div class="container">
         <header class="section-head reveal">
@@ -196,130 +196,211 @@
           processes and implementing enterprise finance systems.
         </p>
 
-        <div class="profile-meta reveal">
-          <p class="profile-meta__label">Experience spans</p>
-          <ul class="pill-list">
-            <li>Audit</li>
-            <li>Regional accounting</li>
-            <li>Financial analysis</li>
-            <li>ERP transformation</li>
-            <li>M&amp;A</li>
-          </ul>
+        <div class="help reveal">
+          <p class="help__label">How I can help</p>
+          <div class="help__grid">
+            <div class="help__item">
+              <span class="help__num">01</span>
+              <h3>Group consolidation &amp; reporting</h3>
+              <p>Accurate, on-time numbers across multi-entity groups.</p>
+            </div>
+            <div class="help__item">
+              <span class="help__num">02</span>
+              <h3>FP&amp;A &amp; decision support</h3>
+              <p>Budgets, variance and EBITDA analysis that management can act on.</p>
+            </div>
+            <div class="help__item">
+              <span class="help__num">03</span>
+              <h3>Finance transformation</h3>
+              <p>ERP implementation and process redesign that make finance faster.</p>
+            </div>
+            <div class="help__item">
+              <span class="help__num">04</span>
+              <h3>Controls &amp; clean-up</h3>
+              <p>Standard procedures, stronger controls and reconciled balances.</p>
+            </div>
+          </div>
+          <p class="help__tools"><span>Tools I work with</span> NetSuite · SAP S/4HANA · BlackLine · Xero · Power BI · Tableau · Alteryx · Excel VBA · Power Query</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 03 EXPERIENCE ============ -->
-    <section class="section" id="experience">
+    <!-- ============ 03 MY APPROACH: beliefs + how I work ============ -->
+    <section class="section section--tint" id="approach">
       <div class="container">
         <header class="section-head reveal">
           <span class="section-num">03</span>
-          <h2>Professional experience</h2>
+          <h2>My approach</h2>
+        </header>
+
+        <p class="sub-label reveal">What I believe</p>
+        <div class="beliefs">
+          <article class="belief reveal">
+            <span class="belief__mark" aria-hidden="true">“</span>
+            <h3>AI is now part of the finance toolkit.</h3>
+            <p>Used well, AI automates the routine, sharpens analysis and frees finance teams to focus on judgement.
+              I believe AI literacy is no longer optional — it is a core competency for every finance professional today.</p>
+          </article>
+          <article class="belief reveal" style="--d:.1s">
+            <span class="belief__mark" aria-hidden="true">“</span>
+            <h3>A weak starting hand isn’t the final result.</h3>
+            <p>With the right leadership, the right team and a clear direction, a small company can grow into a large one.
+              Where a business starts does not decide where it finishes.</p>
+          </article>
+        </div>
+
+        <div class="work-head reveal">
+          <p class="sub-label">How I work</p>
+          <p class="work-head__note">In the words of colleagues · <span class="hint-desktop">hover</span><span class="hint-touch">tap</span> a card</p>
+        </div>
+        <div class="flip-grid reveal">
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__icon"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg></span>
+                <span class="flip__title">Firm, with clear direction</span>
+                <span class="flip__more" aria-hidden="true">+</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__title">Firm, with clear direction</span>
+                <span class="flip__text">Sets a clear course and holds to it, so the team always knows where we are heading and what good looks like.</span>
+              </span>
+            </span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__icon"><svg class="i" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3Z"/></svg></span>
+                <span class="flip__title">Feasible, practical solutions</span>
+                <span class="flip__more" aria-hidden="true">+</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__title">Feasible, practical solutions</span>
+                <span class="flip__text">Recommendations built for how the business actually runs — workable, realistic and ready to implement.</span>
+              </span>
+            </span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__icon"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+                <span class="flip__title">Miles ahead of the issue</span>
+                <span class="flip__more" aria-hidden="true">+</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__title">Miles ahead of the issue</span>
+                <span class="flip__text">Anticipates problems early, preventing shortfalls before they surface and avoiding rushed, last-minute fixes.</span>
+              </span>
+            </span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__icon"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M15 14.2c3 .1 6 1.8 6 4.8"/></svg></span>
+                <span class="flip__title">Collaborative across the business</span>
+                <span class="flip__more" aria-hidden="true">+</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__title">Collaborative across the business</span>
+                <span class="flip__text">Works hand in hand with the whole finance team and with other departments — because good numbers depend on everyone.</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 CAREER JOURNEY ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">04</span>
+          <h2>Career journey</h2>
         </header>
 
         <div class="timeline">
           <div class="timeline__rail" aria-hidden="true"><div class="timeline__fill"></div></div>
 
-          <article class="job is-open">
+          <article class="job job--now">
+            <span class="job__marker" aria-hidden="true"></span>
+            <div class="job__card now-card reveal">
+              <div class="job__top">
+                <span class="now-card__label"><span class="dot" aria-hidden="true"></span>Right now</span>
+              </div>
+              <h3 class="job__company">Turning free cash flow into sharper decisions</h3>
+              <p class="job__story">Building a decision-support framework that shows management how best to deploy free cash flow —
+                weighing capex, expansion and additional headcount against the revenue each is expected to generate,
+                with breakeven and ROI analysis behind every recommendation.</p>
+            </div>
+          </article>
+
+          <article class="job">
             <span class="job__marker" aria-hidden="true"></span>
             <div class="job__card reveal">
               <div class="job__top">
-                <span class="job__date">Jun 2025 — Present</span>
-                <span class="badge">Current</span>
+                <span class="job__chapter">Chapter 4 · Regional finance</span>
+                <span class="job__date">2025 — Present</span>
               </div>
-              <h3 class="job__company">Alfa Medicus Pte Ltd</h3>
+              <h3 class="job__company">Alfa Medicus</h3>
               <p class="job__role">Regional Accountant, Consolidation &amp; FP&amp;A</p>
-              <button class="job__toggle" type="button" aria-expanded="true" aria-controls="job-1">
-                <span class="job__toggle-label">Hide details</span><span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="job__details" id="job-1">
-                <div>
-                  <ul>
-                    <li>Lead monthly group consolidation, reporting and budgeting across 20 APAC subsidiaries.</li>
-                    <li>Deliver budget-versus-actual analysis covering revenue, expenses and EBITDA.</li>
-                    <li>Spearheaded NetSuite and SAP ERP implementation.</li>
-                    <li>Reduced month-end close from 15 to 9 days through SOP standardisation.</li>
-                    <li>Supervise and mentor a team of 10.</li>
-                    <li>Cleared a four-year backlog of suspense accounts and unreconciled bank statements.</li>
-                    <li>Support banking matters, audit coordination and transaction accounting.</li>
-                  </ul>
-                </div>
-              </div>
+              <p class="job__story">Leading consolidation and FP&amp;A across 20 APAC subsidiaries, and driving the systems
+                and process changes behind a faster, cleaner close.</p>
             </div>
           </article>
 
           <article class="job">
             <span class="job__marker" aria-hidden="true"></span>
             <div class="job__card reveal">
-              <div class="job__top"><span class="job__date">Jan 2022 — Dec 2024</span></div>
+              <div class="job__top">
+                <span class="job__chapter">Chapter 3 · Leading in the Big Four</span>
+                <span class="job__date">2022 — 2024</span>
+              </div>
               <h3 class="job__company">KPMG</h3>
               <p class="job__role">Assistant Manager, Assurance</p>
-              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="job-2">
-                <span class="job__toggle-label">Show details</span><span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="job__details" id="job-2">
-                <div>
-                  <ul>
-                    <li>Led external audits for listed and multinational groups across APAC.</li>
-                    <li>Managed and coached audit teams.</li>
-                    <li>Performed SOX testing across R2R, P2P and O2C cycles.</li>
-                    <li>Financial analysis, impairment assessments and M&amp;A due diligence.</li>
-                    <li>Built an Alteryx fixed-asset depreciation tool, cutting testing from three days to one.</li>
-                  </ul>
-                </div>
-              </div>
+              <p class="job__story">Led audits for listed and multinational groups across APAC, coached teams,
+                and began automating the work with analytics.</p>
             </div>
           </article>
 
           <article class="job">
             <span class="job__marker" aria-hidden="true"></span>
             <div class="job__card reveal">
-              <div class="job__top"><span class="job__date">Jul 2020 — Dec 2021</span></div>
+              <div class="job__top">
+                <span class="job__chapter">Chapter 2 · Big Four foundations</span>
+                <span class="job__date">2020 — 2021</span>
+              </div>
               <h3 class="job__company">Ernst &amp; Young</h3>
               <p class="job__role">Experienced Associate, Assurance</p>
-              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="job-3">
-                <span class="job__toggle-label">Show details</span><span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="job__details" id="job-3">
-                <div>
-                  <ul>
-                    <li>Executed external audits across multiple industries.</li>
-                  </ul>
-                  <ul class="tag-row">
-                    <li>Semiconductor</li><li>Industrial technology</li><li>Telecommunications</li><li>Property</li>
-                  </ul>
-                </div>
-              </div>
+              <p class="job__story">Audited businesses across semiconductor, industrial technology, telecommunications
+                and property — a broad view of how different industries run their numbers.</p>
             </div>
           </article>
 
           <article class="job">
             <span class="job__marker" aria-hidden="true"></span>
             <div class="job__card reveal">
-              <div class="job__top"><span class="job__date">Mar 2019 — May 2020</span></div>
-              <h3 class="job__company">YYC Advisory LLP</h3>
-              <p class="job__role">Audit Associate</p>
-              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="job-4">
-                <span class="job__toggle-label">Show details</span><span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="job__details" id="job-4">
-                <div>
-                  <ul>
-                    <li>Performed audits for SME clients under MFRS and MPERS frameworks.</li>
-                  </ul>
-                </div>
+              <div class="job__top">
+                <span class="job__chapter">Chapter 1 · The fundamentals</span>
+                <span class="job__date">2019 — 2020</span>
               </div>
+              <h3 class="job__company">YYC Advisory</h3>
+              <p class="job__role">Audit Associate</p>
+              <p class="job__story">Where it started: audits for SME clients and a solid grounding in the fundamentals.</p>
             </div>
           </article>
         </div>
+
+        <a class="btn btn--link journey__resume reveal" data-resume-view href="#articles" target="_blank" rel="noopener">
+          Full details in my resume <span class="chev">›</span>
+        </a>
       </div>
     </section>
 
-    <!-- ============ 04 PROJECTS (Apple-style gallery) ============ -->
+    <!-- ============ 05 PROJECTS (Apple-style gallery) ============ -->
     <section class="section section--navy" id="projects">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-num">04</span>
+          <span class="section-num">05</span>
           <h2>Selected projects</h2>
         </header>
         <p class="section-lede reveal">Swipe through, then tap a card to see the work behind it.</p>
@@ -393,71 +474,6 @@
           <div class="carousel__arrows">
             <button type="button" id="carouselPrev" aria-label="Previous project"><svg class="i" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
             <button type="button" id="carouselNext" aria-label="Next project"><svg class="i" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 05 EXPERTISE (segmented control) ============ -->
-    <section class="section" id="expertise">
-      <div class="container">
-        <header class="section-head reveal">
-          <span class="section-num">05</span>
-          <h2>Expertise</h2>
-        </header>
-
-        <div class="segmented reveal" role="tablist" aria-label="Expertise categories">
-          <span class="segmented__pill" aria-hidden="true"></span>
-          <button type="button" role="tab" id="tab-erp" aria-controls="panel-erp" aria-selected="true">ERP &amp; Systems</button>
-          <button type="button" role="tab" id="tab-fin" aria-controls="panel-fin" aria-selected="false" tabindex="-1">Financial Management</button>
-          <button type="button" role="tab" id="tab-data" aria-controls="panel-data" aria-selected="false" tabindex="-1">Data &amp; Analytics</button>
-          <button type="button" role="tab" id="tab-pro" aria-controls="panel-pro" aria-selected="false" tabindex="-1">Professional</button>
-        </div>
-
-        <div class="tab-panels">
-          <div class="tab-panel is-active" id="panel-erp" role="tabpanel" aria-labelledby="tab-erp">
-            <div class="tab-panel__intro">
-              <h3>ERP &amp; Finance Systems</h3>
-              <p>Enterprise platforms for running, closing and automating multi-entity finance.</p>
-            </div>
-            <ul class="chips">
-              <li class="chip">Oracle NetSuite</li><li class="chip">SAP S/4HANA</li><li class="chip">Xero</li>
-              <li class="chip">BlackLine</li><li class="chip">FileAI</li><li class="chip">Acme</li>
-            </ul>
-          </div>
-
-          <div class="tab-panel" id="panel-fin" role="tabpanel" aria-labelledby="tab-fin">
-            <div class="tab-panel__intro">
-              <h3>Financial Management</h3>
-              <p>The core disciplines behind accurate group numbers and sound decisions.</p>
-            </div>
-            <ul class="chips">
-              <li class="chip">Consolidation</li><li class="chip">Financial reporting</li><li class="chip">FP&amp;A</li>
-              <li class="chip">Budgeting</li><li class="chip">EBITDA analysis</li><li class="chip">Financial controls</li>
-              <li class="chip">M&amp;A accounting</li>
-            </ul>
-          </div>
-
-          <div class="tab-panel" id="panel-data" role="tabpanel" aria-labelledby="tab-data">
-            <div class="tab-panel__intro">
-              <h3>Data &amp; Analytics</h3>
-              <p>Tools for turning finance data into insight — and removing manual work.</p>
-            </div>
-            <ul class="chips">
-              <li class="chip">Power BI</li><li class="chip">Tableau</li><li class="chip">Alteryx Designer Core</li>
-              <li class="chip">Excel VBA</li><li class="chip">Power Query</li>
-            </ul>
-          </div>
-
-          <div class="tab-panel" id="panel-pro" role="tabpanel" aria-labelledby="tab-pro">
-            <div class="tab-panel__intro">
-              <h3>Professional Experience</h3>
-              <p>Assurance foundations paired with hands-on regional finance operations.</p>
-            </div>
-            <ul class="chips">
-              <li class="chip">External audit</li><li class="chip">SOX</li><li class="chip">Financial statement analysis</li>
-              <li class="chip">Process improvement</li><li class="chip">Regional finance operations</li>
-            </ul>
           </div>
         </div>
       </div>

@@ -351,6 +351,81 @@ section[id] { scroll-margin-top: var(--nav-h); }
 .pill-list { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
 .pill-list li { padding: .5rem 1rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: .9rem; }
 
+/* ---------- 02 How I can help ---------- */
+.help { margin-top: clamp(3rem, 7vw, 4.5rem); }
+.help__label, .sub-label { margin: 0 0 1.25rem; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+.help__grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+.help__item { padding: 1.5rem 1.5rem 1.5rem 0; border-bottom: 1px solid var(--line); }
+.help__item + .help__item { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+.help__num { font-family: var(--font-serif); font-style: italic; color: var(--accent); }
+.help__item h3 { margin: .6rem 0 .4rem; font-size: 1.08rem; letter-spacing: -.015em; line-height: 1.3; }
+.help__item p { margin: 0; font-size: .92rem; color: var(--text-muted); }
+.help__tools { margin: 1.5rem 0 0; font-size: .9rem; color: var(--text-muted); line-height: 1.8; }
+.help__tools span { margin-right: .75rem; font-weight: 600; color: var(--text); }
+@media (max-width: 900px) {
+  .help__grid { grid-template-columns: 1fr 1fr; }
+  .help__item:nth-child(3) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 560px) {
+  .help__grid { grid-template-columns: 1fr; }
+  .help__item, .help__item + .help__item { padding: 1.25rem 0; border-left: 0; }
+}
+
+/* ---------- 03 My approach ---------- */
+.beliefs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: clamp(3.5rem, 8vw, 5rem); }
+.belief {
+  position: relative; overflow: hidden; padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.belief__mark { position: absolute; top: -.2em; right: .25em; font-family: var(--font-serif); font-size: 9rem; line-height: 1; color: var(--accent); opacity: .18; }
+.belief h3 { position: relative; margin: 0 0 1rem; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.15; letter-spacing: -.03em; }
+.belief p { position: relative; margin: 0; color: var(--text-muted); }
+@media (max-width: 820px) { .beliefs { grid-template-columns: 1fr; } }
+
+.work-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 1rem; }
+.work-head__note { margin: 0 0 1.25rem; font-size: .85rem; color: var(--text-muted); }
+.hint-touch { display: none; }
+@media (hover: none) { .hint-desktop { display: none; } .hint-touch { display: inline; } }
+
+.flip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.flip { display: block; width: 100%; height: 250px; text-align: left; perspective: 1100px; border-radius: var(--radius); }
+.flip__inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .8s var(--ease); }
+.flip.is-flipped .flip__inner { transform: rotateY(180deg); }
+@media (hover: hover) { .flip:hover .flip__inner { transform: rotateY(180deg); } }
+.flip__face {
+  position: absolute; inset: 0; display: flex; flex-direction: column; gap: .75rem;
+  padding: 1.6rem; border-radius: var(--radius); backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.flip__front { justify-content: space-between; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.flip__back {
+  justify-content: center; transform: rotateY(180deg); color: #EAF0F8;
+  background: radial-gradient(300px 200px at 100% 0%, rgba(205, 169, 84, .25), transparent 60%), linear-gradient(150deg, var(--navy-900), var(--navy-700));
+}
+.flip__icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--surface-2); color: var(--accent); }
+.flip__icon .i { width: 26px; height: 26px; stroke-width: 1.6; }
+.flip__title { font-size: 1.2rem; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; padding-right: 2rem; }
+.flip__back .flip__title { color: var(--gold-400); font-size: 1rem; padding-right: 0; }
+.flip__text { font-size: .98rem; line-height: 1.55; color: #D6DEEA; }
+.flip__more {
+  position: absolute; right: 1.25rem; bottom: 1.25rem; display: grid; place-items: center;
+  width: 32px; height: 32px; border-radius: 50%; background: var(--navy-900); color: #fff; font-size: 1.2rem; line-height: 1;
+}
+[data-theme="dark"] .flip__more { background: var(--gold-400); color: var(--navy-900); }
+@media (max-width: 1000px) { .flip-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .flip { height: 180px; } .flip-grid { grid-template-columns: 1fr; gap: .75rem; } .flip__face { padding: 1.35rem; } .flip__icon { width: 44px; height: 44px; border-radius: 14px; } }
+
+/* ---------- 04 Career journey extras ---------- */
+.job__chapter { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.job__story { margin: .85rem 0 0; color: var(--text-muted); }
+.now-card {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--gold-100) 70%, var(--surface)), var(--surface) 60%);
+}
+[data-theme="dark"] .now-card { background: linear-gradient(135deg, rgba(205, 169, 84, .12), var(--surface) 60%); }
+.now-card__label { display: inline-flex; align-items: center; gap: .55rem; font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); }
+.job--now .job__marker { border-color: var(--accent-2); }
+.journey__resume { margin-top: 1.75rem; margin-left: 2rem; }
+
 /* ---------- 03 Experience timeline ---------- */
 .timeline { position: relative; max-width: 860px; padding-left: 2.5rem; }
 .timeline__rail { position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; border-radius: 2px; background: var(--line); overflow: hidden; }
@@ -371,17 +446,6 @@ section[id] { scroll-margin-top: var(--nav-h); }
 [data-theme="dark"] .badge { background: rgba(63, 179, 160, .15); color: #6FD0BF; }
 .job__company { margin: .45rem 0 .1rem; font-size: clamp(1.2rem, 2.4vw, 1.45rem); letter-spacing: -.02em; }
 .job__role { margin: 0; color: var(--text-muted); }
-.job__toggle { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1rem; font-size: .88rem; font-weight: 500; color: var(--link); }
-.plus { position: relative; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid currentColor; }
-.plus::before, .plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); transition: transform .4s var(--ease); }
-.plus::after { transform: translate(-50%, -50%) rotate(90deg); }
-[aria-expanded="true"] .plus::after { transform: translate(-50%, -50%) rotate(0deg); }
-.job__details { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s var(--ease); }
-.job.is-open .job__details { grid-template-rows: 1fr; }
-.job__details > div { overflow: hidden; }
-.job__details ul:not(.tag-row) { display: grid; gap: .6rem; margin: 1.1rem 0 0; padding: 0; list-style: none; }
-.job__details li { position: relative; padding-left: 1.25rem; font-size: .95rem; color: var(--text-muted); }
-.job__details ul:not(.tag-row) li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 0; padding: 0; list-style: none; }
 .tag-row li { padding: .3rem .75rem !important; border-radius: 999px; background: var(--surface-2); color: var(--text); font-size: .8rem; }
@@ -487,44 +551,6 @@ section[id] { scroll-margin-top: var(--nav-h); }
   .modal.is-closing { animation: sheetOut .3s ease forwards; }
   .modal__inner { padding-bottom: calc(2rem + env(safe-area-inset-bottom)); }
 }
-
-/* ---------- 05 Expertise segmented control ---------- */
-.segmented {
-  position: relative; display: inline-flex; max-width: 100%; padding: 4px;
-  border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line);
-  overflow-x: auto; scrollbar-width: none;
-}
-.segmented::-webkit-scrollbar { display: none; }
-.segmented__pill {
-  position: absolute; z-index: 0; top: 4px; bottom: 4px; left: 0;
-  border-radius: 999px; background: var(--surface); box-shadow: 0 2px 10px rgba(15, 35, 64, .12);
-  transition: transform .5s var(--ease), width .5s var(--ease);
-}
-[data-theme="dark"] .segmented__pill { background: var(--navy-600); }
-.segmented button {
-  position: relative; z-index: 1; padding: .65rem 1.15rem; border-radius: 999px; white-space: nowrap;
-  font-size: .9rem; font-weight: 500; color: var(--text-muted); transition: color .3s;
-}
-.segmented button[aria-selected="true"] { color: var(--text); }
-
-.tab-panels { display: grid; margin-top: 2.5rem; }
-.tab-panel {
-  grid-area: 1 / 1; display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem; align-items: start;
-  opacity: 0; visibility: hidden; transform: translateY(14px);
-  transition: opacity .5s var(--ease), transform .5s var(--ease), visibility .5s;
-}
-.tab-panel.is-active { opacity: 1; visibility: visible; transform: none; }
-.tab-panel__intro h3 { margin: 0 0 .5rem; font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: -.025em; }
-.tab-panel__intro p { margin: 0; color: var(--text-muted); }
-.chips { display: flex; flex-wrap: wrap; gap: .65rem; margin: 0; padding: 0; list-style: none; }
-.chip {
-  padding: .75rem 1.15rem; border-radius: 14px;
-  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
-  font-weight: 500; transition: border-color .25s, transform .25s var(--ease);
-}
-.chip:hover { border-color: var(--accent); transform: translateY(-2px); }
-.tab-panel.is-active .chip { animation: chipIn .55s var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms + 80ms); }
-@media (max-width: 820px) { .tab-panel { grid-template-columns: 1fr; gap: 1.25rem; } }
 
 /* ---------- 06 Qualifications ---------- */
 .quals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
