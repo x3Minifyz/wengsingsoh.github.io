@@ -33,7 +33,6 @@ window.SITE_CONTENT = {
       date:    'Nov 2026',
       summary: 'Audit taught me how to examine a business. Industry taught me how to understand one from the inside.',
       url:     'articles/from-big-four-to-industry.html',
-      image:   'articles/images/big-four-to-industry.jpg',   // optional thumbnail
       download: false
     },
 
