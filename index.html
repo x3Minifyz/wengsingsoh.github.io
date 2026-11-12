@@ -39,6 +39,20 @@
   </script>
   <script src="content.js" defer></script>
   <script src="script.js" defer></script>
+  <!-- Tells Google who this site is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Soh Weng Sing",
+    "url": "https://wengsingsoh.com/",
+    "jobTitle": "Regional Accountant, Consolidation & FP&A",
+    "worksFor": { "@type": "Organization", "name": "Alfa Medicus" },
+    "alumniOf": [{ "@type": "Organization", "name": "KPMG" }, { "@type": "Organization", "name": "Ernst & Young" }],
+    "hasCredential": ["ACCA", "Chartered Accountant of Singapore"],
+    "sameAs": ["https://www.linkedin.com/in/wengsingsoh/"]
+  }
+  </script>
 </head>
 
 <body>
@@ -63,7 +77,7 @@
       </nav>
 
       <div class="nav__actions">
-        <a class="nav__resume" data-resume-view href="#articles" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__resume" data-resume-view href="documents/Soh-Weng-Sing-Resume.pdf" target="_blank" rel="noopener">Resume</a>
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch light / dark theme">
           <svg class="i icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
           <svg class="i icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -83,7 +97,7 @@
     <a href="#projects" style="--i:3">Projects</a>
     <a href="#articles" style="--i:4">Articles</a>
     <a href="#contact" style="--i:5">Contact</a>
-    <a href="#articles" style="--i:6" data-resume-view target="_blank" rel="noopener">Resume ↗</a>
+    <a href="documents/Soh-Weng-Sing-Resume.pdf" style="--i:6" data-resume-view target="_blank" rel="noopener">Resume ↗</a>
   </div>
 
   <main id="main">
@@ -130,7 +144,7 @@
         </p>
         <div class="hero__cta fade-up" style="--d:.7s">
           <a class="btn btn--primary" href="#profile">About me</a>
-          <a class="btn btn--ghost" data-resume-download href="#articles">
+          <a class="btn btn--ghost" data-resume-download href="documents/Soh-Weng-Sing-Resume.pdf" download>
             <svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>Download resume
           </a>
           <a class="btn btn--touch" href="#contact">Get in touch <span class="chev" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
@@ -398,7 +412,7 @@
           </article>
         </div>
 
-        <a class="btn btn--link journey__resume reveal" data-resume-view href="#articles" target="_blank" rel="noopener">
+        <a class="btn btn--link journey__resume reveal" data-resume-view href="documents/Soh-Weng-Sing-Resume.pdf" target="_blank" rel="noopener">
           Full details in my resume <span class="chev">›</span>
         </a>
       </div>
@@ -540,15 +554,22 @@
             <h3>Soh Weng Sing — CV</h3>
             <p class="resume-card__text">Full career history, qualifications and skills in one document.</p>
             <div class="resume-card__actions">
-              <a class="btn btn--gold" data-resume-view href="#" target="_blank" rel="noopener">View resume</a>
-              <a class="btn btn--outline-light" data-resume-download href="#">
+              <a class="btn btn--gold" data-resume-view href="documents/Soh-Weng-Sing-Resume.pdf" target="_blank" rel="noopener">View resume</a>
+              <a class="btn btn--outline-light" data-resume-download href="documents/Soh-Weng-Sing-Resume.pdf" download>
                 <svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>Download PDF
               </a>
             </div>
             <p class="resume-card__updated" data-resume-updated></p>
           </article>
 
-          <div class="article-list reveal" id="articleList" style="--d:.1s"></div>
+          <div class="article-list reveal" id="articleList" style="--d:.1s">
+            <!-- Plain link so search engines see it before JavaScript runs; script.js redraws this list from content.js -->
+            <a class="article-item" href="articles/from-big-four-to-industry.html">
+              <span class="article-item__meta"><span class="article-item__type">Article</span><span>Nov 2026</span></span>
+              <span class="article-item__title">From the Big Four to Industry: What Changed, and What I’d Tell My Younger Self</span>
+              <span class="article-item__summary">Audit taught me how to examine a business. Industry taught me how to understand one from the inside.</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

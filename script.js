@@ -409,6 +409,7 @@
     if (!articles.length) {
       articleList.innerHTML = '<div class="article-empty"><strong>Articles coming soon</strong><span>Insights on consolidation, FP&amp;A and finance transformation.</span></div>';
     } else {
+      articleList.replaceChildren();
       articles.forEach((item) => {
         const a = document.createElement('a');
         a.className = 'article-item';
