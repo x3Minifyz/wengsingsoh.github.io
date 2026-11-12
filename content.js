@@ -7,6 +7,9 @@
         e.g.  documents/consolidation-playbook.pdf
      2. Add an entry below with  url: 'documents/consolidation-playbook.pdf'
 
+   HOW TO ADD AN ARTICLE WRITTEN AS ITS OWN PAGE
+     Put the page in the "articles" folder and use  url: 'articles/your-page.html'
+
    HOW TO ADD AN ONLINE ARTICLE (LinkedIn post, Medium, news, Google Drive…)
      Just paste the full link into  url: 'https://...'
 
@@ -23,6 +26,15 @@ window.SITE_CONTENT = {
 
   // Newest first. While this list is empty, the site shows "Articles coming soon".
   articles: [
+
+    {
+      title:   'From the Big Four to Industry: What Changed, and What I’d Tell My Younger Self',
+      type:    'Article',
+      date:    'Nov 2026',
+      summary: 'Audit taught me how to examine a business. Industry taught me how to understand one from the inside.',
+      url:     'articles/from-big-four-to-industry.html',
+      download: false
+    },
 
     // ---- Copy a block, remove the // at the start of each line, then fill it in ----
 

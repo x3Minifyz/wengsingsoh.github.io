@@ -413,8 +413,9 @@
         const a = document.createElement('a');
         a.className = 'article-item';
         a.href = item.url;
+        const external = /^https?:\/\//i.test(item.url);
         if (item.download) a.setAttribute('download', '');
-        else { a.target = '_blank'; a.rel = 'noopener'; }
+        else if (external) { a.target = '_blank'; a.rel = 'noopener'; }
 
         const meta = document.createElement('span');
         meta.className = 'article-item__meta';
