@@ -188,15 +188,6 @@
 
   toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' }));
 
-  /* ---------- "How I work" flip cards ---------- */
-  $$('.flip').forEach((card) => {
-    card.addEventListener('click', () => {
-      const on = !card.classList.contains('is-flipped');
-      card.classList.toggle('is-flipped', on);
-      card.setAttribute('aria-pressed', String(on));
-    });
-  });
-
   /* ---------- Projects carousel ---------- */
   const track = $('#projectTrack');
   const cards = $$('.project-card', track);
