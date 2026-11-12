@@ -436,6 +436,15 @@
           ? '<svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>'
           : '<svg class="i" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>';
 
+        if (item.image) {
+          const img = document.createElement('img');
+          img.className = 'article-item__thumb';
+          img.src = item.image;
+          img.alt = '';
+          img.loading = 'lazy';
+          a.classList.add('has-thumb');
+          a.append(img);
+        }
         a.append(meta, title);
         if (item.summary) {
           const sum = document.createElement('span');

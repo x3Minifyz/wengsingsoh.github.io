@@ -50,6 +50,23 @@
     share.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(location.href.split('#')[0])}`;
   }
 
+  // Next article (from the list in content.js)
+  const nextLink = $('#nextArticle');
+  const post = $('.post');
+  const list = (window.SITE_CONTENT && Array.isArray(window.SITE_CONTENT.articles)) ? window.SITE_CONTENT.articles.filter((a) => a && a.title && a.url) : [];
+  if (nextLink && post && list.length > 1) {
+    const here = post.dataset.articleUrl;
+    const i = list.findIndex((a) => a.url === here);
+    const next = list[(i + 1) % list.length];
+    if (next && next.url !== here) {
+      const external = /^https?:\/\//i.test(next.url);
+      nextLink.href = external ? next.url : `../${next.url}`;
+      if (external) { nextLink.target = '_blank'; nextLink.rel = 'noopener'; }
+      $('#nextTitle').textContent = next.title;
+      nextLink.hidden = false;
+    }
+  }
+
   // Copy link + toast
   const toast = $('#toast');
   let timer;

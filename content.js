@@ -33,6 +33,7 @@ window.SITE_CONTENT = {
       date:    'Nov 2026',
       summary: 'Audit taught me how to examine a business. Industry taught me how to understand one from the inside.',
       url:     'articles/from-big-four-to-industry.html',
+      image:   'articles/images/big-four-to-industry.jpg',   // optional thumbnail
       download: false
     },
 
@@ -44,6 +45,7 @@ window.SITE_CONTENT = {
     //   date:    'Dec 2026',
     //   summary: 'One or two lines describing what readers will get.',
     //   url:     'https://www.linkedin.com/pulse/your-article-link',
+    //   image:   'articles/images/your-thumbnail.jpg',   // optional — leave out for no thumbnail
     //   download: false               // false = opens in a new tab
     // },
 
